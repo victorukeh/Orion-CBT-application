@@ -1,0 +1,15 @@
+.card{
+	background-color: rgb(216, 241, 240);
+	border-radius: 15px;
+	/* box-shadow: turquoise; */
+	/* display: flex; */
+	font-weight: bold;
+	align-items: left;
+	padding-left: 5vh;
+	padding-top: 2vh;
+}
+
+.paste{
+	padding-left: 20px;
+	padding-right: 20px;
+}

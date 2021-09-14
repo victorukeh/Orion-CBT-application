@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	min-height: 100vh;
+	/* overflow-x: hidden; */
+	background: #fff;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+}
+
+.navigation{
+	position: fixed;
+	top:0px;
+	left:0px;
+	bottom:2px; 
+	width: 70px;
+	/* border-radius: 10px; */
+	box-sizing: initial;
+	background: #02063d;
+	/* border-top-right-radius: 10px; */
+	border-bottom-right-radius: 10px;
+	transition: width 0.5s;
+	overflow-x: hidden;
+}
+
+.navigation.active{
+	width: 300px;
+}
+
+.navigation ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/* padding-left:8.5px; */
+	padding-left:5px;
+	padding-top: 40px;
+ } 
+
+ .navigation ul li{
+	position: relative;
+	width:100%;
+	list-style: none;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active{
+	background: white;
+}
+
+.navigation ul li b:nth-child(1){
+	position: absolute;
+	top: -20px;
+	height: 20px;
+	width: 100%;
+	background: #fff;
+	display:none; 
+}
+
+.navigation ul li b:nth-child(1)::before{
+	content: '';
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-bottom-right-radius: 20px;
+	/* background: linear-gradient(45deg, #1694dd, #0e0d0d); */
+	  background: #02063d;
+	  /* #191970; */
+
+}
+
+.navigation ul li b:nth-child(2){
+	position: absolute;
+	bottom: -20px;
+	height: 20px;
+	width: 100%;
+	background: #fff;
+	display:none; 
+}
+
+.navigation ul li b:nth-child(2)::before{
+	content: '';
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-top-right-radius: 20px;
+	/* background: linear-gradient(30deg, #1694dd, #0e0d0d); */
+	 background: #02063d;
+	  /* #191970; */
+}
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2)
+{
+	display:block;
+}
+
+.navigation ul li a{
+	position: relative;
+	display: block;
+	width:100%;
+	display:flex;
+	text-decoration: none;
+	color: #fff;
+	/* list-style: none; */
+ }
+
+ .navigation ul li.active a{
+	 color: #333;
+ }
+
+.navigation ul li a .icon{
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+} 
+
+.navigation ul li a .icon fa{
+	font-size: 1.5em;
+} 
+
+.navigation ul li a .icon fas{
+	font-size: 1.5em;
+} 
+.navigation ul li a .icon fab{
+	font-size: 1.5em;
+} 
+
+.navigation ul li a .title{
+
+	position:relative;
+	display: block;
+	padding: 0 10px;
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
+}  
+
+
+
+
+.toggle{
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background: #02063d;
+	/* #020222; */
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle.active
+{
+	background: #ff4d89;
+}
+
+.toggle i{
+	position: absolute;
+	color: #fff;
+	font-size: 34px;
+	display: none;
+}
+
+.toggle i.open,
+.toggle.active i.close{
+	display: block;
+}
+
+.toggle i.close
+.toggle.active i.open{
+	display: none;
+}
+
+
+
+
+
+/* For Top Bar */
+.main{
+	/* top:2px; */
+	position: absolute;
+	width: calc(100% - 70px); 
+	left: 70px;
+	min-height: 100vh;
+	background: #fff;
+	transition: 0.5s;
+
+}
+
+.main.active{
+	
+	width: calc(100% - 300px);
+	left: 300px;
+	transition: 0.5s;
+}
+
+.main .topbar{
+	width:100%;
+	background: rgb(236, 232, 232);
+	height: 60px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.search{
+	position: relative;
+	width: 400px;
+	margin: 0 10px;
+}
+
+.search label{
+	position: relative;
+	width: 100%;
+}
+
+.search label input{
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	padding: 5px 20px;
+	padding-left:35px;
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+.search label .fa{
+	position: absolute;
+	left: 15px;
+	top: 4px;
+}
+
+
+.orion{
+	max-width: 800px;
+	margin: 50px auto;
+	position:relative;
+	padding:30px;
+	background: white;
+}
+
+.orion .title{
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 3em;
+	line-height: 48px;
+	padding-bottom: 20px;
+}
+.contact-form .form-field{
+	position: relative;
+	margin: 32px 0;
+}
+.contact-form .input-text{
+	display:block;
+	width:100%;
+	height: 30px;
+	border-width: 0 0 2px 0;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+}
+
+.contact-form .input-text:focus{
+	outline:none;
+}
+
+.contact-form .label{
+	position: absolute;
+	left: 20px;
+	bottom: 11px;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+	cursor: text;
+	transition: transform 0.2s ease-in-out;
+}
